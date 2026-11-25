@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#120d10">
+<meta name="description" content="রূপকথা বিউটি পার্লার — Bridal Makeup, Hair Styling, Facial, Skin Care and premium beauty services in Feni.">
+<title>RUPKOTHA | The Royal Beauty Experience</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#100b0e;--panel:#1b1217;--panel2:#24171e;--gold:#d6b16d;--gold2:#f1dba8;--cream:#fff5e9;--muted:#c7b7ad;--wine:#641f35;--line:#b78d503d}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{background:var(--bg);color:var(--cream);font-family:"Hind Siliguri",sans-serif;line-height:1.7}
+a{text-decoration:none;color:inherit}
+img{display:block;max-width:100%}
+.container{width:min(1160px,90%);margin:auto}
+.topline{background:#090608;color:var(--gold2);font-size:12px;text-align:center;padding:7px 12px;letter-spacing:.5px}
+header{position:sticky;top:0;z-index:50;background:#100b0eed;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:24px}
+.brand{display:flex;align-items:center;gap:12px}
+.brand-mark{width:43px;height:43px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font:700 22px "Playfair Display",serif}
+.brand-name{font:700 22px "Playfair Display",serif;letter-spacing:2px;color:var(--gold2);line-height:1.1}
+.brand-sub{font-size:9px;letter-spacing:3px;color:var(--muted)}
+nav{display:flex;align-items:center;gap:25px}
+nav a{font-size:14px;color:#eee0d4;transition:.25s}
+nav a:hover{color:var(--gold)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:12px 23px;border:1px solid var(--gold);border-radius:3px;background:linear-gradient(135deg,var(--gold2),#b88945);color:#1a1012;font-weight:700;cursor:pointer;transition:.25s}
+.btn:hover{transform:translateY(-2px);box-shadow:0 10px 28px #d6b16d30}
+.btn-outline{background:transparent;color:var(--gold2)}
+.menu-btn{display:none;background:none;border:1px solid var(--line);color:var(--gold);font-size:23px;padding:5px 12px}
+.hero{min-height:690px;display:flex;align-items:center;position:relative;isolation:isolate;background:linear-gradient(90deg,#100b0e 0%,#100b0ee8 38%,#100b0e66 72%,#100b0e30 100%),url("https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=1900&q=90") center/cover}
+.hero:after{content:"";position:absolute;inset:18px;border:1px solid #d6b16d55;z-index:-1;pointer-events:none}
+.hero-content{max-width:680px;padding:95px 0}
+.eyebrow{color:var(--gold);font-size:12px;letter-spacing:4px;text-transform:uppercase}
+.hero h1{font:600 clamp(46px,7vw,82px)/1.08 "Playfair Display",serif;margin:20px 0;color:var(--cream)}
+.hero h1 span{color:var(--gold2);font-style:italic}
+.hero p{max-width:560px;color:#e0d2c8;font-size:17px;margin-bottom:30px}
+.actions{display:flex;gap:13px;flex-wrap:wrap}
+.hero-note{margin-top:42px;color:var(--gold2);font-size:12px;letter-spacing:2px}
+section{padding:94px 0}
+.section-head{text-align:center;max-width:690px;margin:0 auto 48px}
+.section-head .eyebrow{letter-spacing:3px}
+.section-head h2{font:600 clamp(32px,5vw,49px)/1.2 "Playfair Display",serif;color:var(--gold2);margin:12px 0}
+.section-head p{color:var(--muted)}
+.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:58px;align-items:center}
+.about-photo{position:relative}
+.about-photo img{width:100%;height:510px;object-fit:cover}
+.about-photo:after{content:"";position:absolute;inset:16px -16px -16px 16px;border:1px solid var(--gold);z-index:-1}
+.about-copy h2{font:600 43px/1.15 "Playfair Display",serif;color:var(--gold2);margin:13px 0 20px}
+.about-copy p{color:var(--muted);margin:0 0 17px}
+.signature{font:italic 24px "Playfair Display",serif;color:var(--gold);margin:23px 0}
+.services{background:linear-gradient(180deg,#1b1217,#130d11)}
+.service-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.service{padding:27px 25px;background:linear-gradient(145deg,#2b1b23,#191116);border:1px solid var(--line);transition:.3s;min-height:185px}
+.service:hover{transform:translateY(-6px);border-color:var(--gold);box-shadow:0 18px 35px #0005}
+.service .ico{font-size:27px;color:var(--gold);margin-bottom:10px}
+.service h3{font-size:20px;color:var(--gold2);margin-bottom:6px}
+.service p{font-size:14px;color:var(--muted)}
+.service small{display:block;color:var(--gold);margin-top:12px}
+.feature-band{background:linear-gradient(100deg,#512034,#24151d);padding:52px 0;border-block:1px solid #d6b16d55}
+.feature-row{display:grid;grid-template-columns:repeat(3,1fr);gap:25px;text-align:center}
+.feature strong{display:block;font:600 24px "Playfair Display",serif;color:var(--gold2);margin-bottom:5px}
+.feature span{color:#ead9d0;font-size:14px}
+.gallery{background:#160f13}
+.gallery-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr;grid-template-rows:230px 230px;gap:14px}
+.gallery-grid img{width:100%;height:100%;object-fit:cover;filter:saturate(.85);transition:.4s}
+.gallery-grid img:hover{filter:saturate(1.1);transform:scale(1.015)}
+.gallery-grid img:first-child{grid-row:span 2}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.why{border-top:1px solid var(--gold);padding:25px 18px}
+.why b{font:600 25px "Playfair Display",serif;color:var(--gold)}
+.why h3{color:var(--gold2);margin:10px 0 6px}
+.why p{color:var(--muted);font-size:14px}
+.booking{background:linear-gradient(120deg,#281722,#130d11)}
+.booking-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:50px;align-items:start}
+.booking-copy h2{font:600 43px/1.15 "Playfair Display",serif;color:var(--gold2);margin:14px 0}
+.booking-copy p{color:var(--muted);margin-bottom:18px}
+.booking-form{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.booking-form input,.booking-form select,.booking-form textarea{width:100%;padding:14px;background:#100b0e;border:1px solid #9d784c66;color:var(--cream);font:15px "Hind Siliguri",sans-serif;border-radius:2px;outline:none}
+.booking-form input:focus,.booking-form select:focus,.booking-form textarea:focus{border-color:var(--gold)}
+.booking-form textarea,.booking-form .full{grid-column:1/-1}
+.booking-form textarea{min-height:110px;resize:vertical}
+.booking-form select option{background:#1b1217}
+.booking-form button{grid-column:1/-1}
+.contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.contact-card{padding:27px 20px;border:1px solid var(--line);background:#1b1217;text-align:center}
+.contact-card .ico{font-size:26px;color:var(--gold)}
+.contact-card h3{color:var(--gold2);margin:8px 0}
+.contact-card p{color:var(--muted);font-size:14px}
+footer{padding:45px 0 25px;background:#090608;border-top:1px solid var(--line);text-align:center}
+.footer-brand{font:600 31px "Playfair Display",serif;color:var(--gold2);letter-spacing:3px}
+footer p{color:var(--muted);font-size:13px;margin:7px 0}
+.footer-links{display:flex;justify-content:center;gap:20px;flex-wrap:wrap;margin:18px 0;color:var(--gold2);font-size:13px}
+.whatsapp{position:fixed;right:20px;bottom:20px;z-index:60;background:#168b52;color:white;padding:12px 18px;border-radius:30px;box-shadow:0 8px 25px #0008;font-weight:700}
+@media(max-width:850px){nav{gap:13px}nav a{font-size:12px}.about-grid,.booking-grid{grid-template-columns:1fr}.about-photo{max-width:650px}.service-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:650px){.nav{min-height:70px}.menu-btn{display:block}nav{display:none;position:absolute;top:70px;left:0;right:0;background:#100b0e;padding:20px 5%;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch}nav.open{display:flex}nav a{font-size:15px;padding:5px}.nav-book{display:none}.hero{min-height:610px;background-position:60% center}.hero-content{padding:75px 0}.hero p{font-size:15px}.about-photo img{height:360px}.about-copy h2{font-size:35px}.service-grid,.why-grid,.contact-grid,.feature-row{grid-template-columns:1fr}.gallery-grid{grid-template-columns:1fr 1fr;grid-template-rows:180px 180px 180px}.gallery-grid img:first-child{grid-row:auto}.booking-form{grid-template-columns:1fr}.booking-form>*{grid-column:1/-1!important}section{padding:70px 0}.section-head{margin-bottom:35px}}
+</style>
+</head>
+<body>
+<div class="topline">FENI • BEAUTY • ELEGANCE • ROYAL EXPERIENCE</div>
+<header>
+  <div class="container nav">
+    <a class="brand" href="#home" aria-label="Rupkotha home">
+      <span class="brand-mark">R</span>
+      <span><span class="brand-name">RUPKOTHA</span><span class="brand-sub">BEAUTY PARLOUR</span></span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    <nav id="nav">
+      <a href="#home">হোম</a><a href="#about">আমাদের সম্পর্কে</a><a href="#services">সার্ভিস</a>
+      <a href="#gallery">গ্যালারি</a><a href="#contact">যোগাযোগ</a>
+    </nav>
+    <a class="btn nav-book" href="#booking">অ্যাপয়েন্টমেন্ট</a>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container"><div class="hero-content">
+    <div class="eyebrow">The Royal Beauty Experience</div>
+    <h1>Reveal Your<br><span>Royal Beauty.</span></h1>
+    <p>আপনার সৌন্দর্য, আপনার আত্মবিশ্বাস। রূপকথা বিউটি পার্লারে প্রতিটি সাজ হোক যত্ন, আভিজাত্য ও নান্দনিকতার অনন্য প্রকাশ।</p>
+    <div class="actions"><a class="btn" href="#booking">বুকিং করুন&nbsp; ↗</a><a class="btn btn-outline" href="#services">সার্ভিস দেখুন</a></div>
+    <div class="hero-note">BRIDAL MAKEUP · SKIN CARE · HAIR STYLING</div>
+  </div></div>
+</section>
+
+<section id="about"><div class="container about-grid">
+  <div class="about-photo"><img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=1000&q=85" alt="Elegant beauty salon interior"></div>
+  <div class="about-copy"><div class="eyebrow">A BEAUTY DESTINATION</div><h2>সৌন্দর্যে থাকুক<br>রাজকীয় ছোঁয়া</h2>
+    <p>রূপকথা বিউটি পার্লার—আপনার সৌন্দর্যচর্চার জন্য একটি যত্নশীল ও আরামদায়ক ঠিকানা। প্রতিটি গ্রাহকের পছন্দ, উপলক্ষ ও ব্যক্তিগত স্টাইলকে গুরুত্ব দিয়ে সেবা দেওয়াই আমাদের লক্ষ্য।</p>
+    <p>ব্রাইডাল ও পার্টি মেকআপ থেকে শুরু করে হেয়ার স্টাইলিং, ফেসিয়াল এবং নিয়মিত বিউটি কেয়ার—আপনার পছন্দের সেবা বেছে নিন এক জায়গায়।</p>
+    <div class="signature">Your beauty, our passion.</div><a class="btn btn-outline" href="#contact">যোগাযোগ করুন</a>
+  </div>
+</div></section>
+
+<section class="services" id="services"><div class="container">
+  <div class="section-head"><div class="eyebrow">OUR SIGNATURE SERVICES</div><h2>Beauty & Care Menu</h2><p>আপনার বিশেষ মুহূর্ত ও প্রতিদিনের যত্নে আমাদের সেবাসমূহ</p></div>
+  <div class="service-grid">
+    <article class="service"><div class="ico">♕</div><h3>ব্রাইডাল মেকআপ</h3><p>বিয়ের দিনের জন্য পরিপূর্ণ ও ব্যক্তিত্বমাফিক সাজ।</p><small>প্যাকেজ জানতে যোগাযোগ করুন</small></article>
+    <article class="service"><div class="ico">✧</div><h3>পার্টি মেকআপ</h3><p>অনুষ্ঠান, পার্টি ও বিশেষ দিনের গ্ল্যামারাস লুক।</p><small>প্যাকেজ জানতে যোগাযোগ করুন</small></article>
+    <article class="service"><div class="ico">♡</div><h3>এনগেজমেন্ট মেকআপ</h3><p>বাগদান ও প্রি-ওয়েডিং অনুষ্ঠানের সাজ।</p><small>প্যাকেজ জানতে যোগাযোগ করুন</small></article>
+    <article class="service"><div class="ico">❀</div><h3>ফেসিয়াল ও ক্লিনআপ</h3><p>ত্বকের ধরন অনুযায়ী পরিচর্যা ও ফেসিয়াল সেবা।</p><small>সার্ভিস ও মূল্য জানতে যোগাযোগ করুন</small></article>
+    <article class="service"><div class="ico">✿</div><h3>স্কিন কেয়ার</h3><p>নিয়মিত ত্বকের যত্ন ও বিউটি কেয়ার।</p><small>সার্ভিস ও মূল্য জানতে যোগাযোগ করুন</small></article>
+    <article class="service"><div class="ico">♧</div><h3>হেয়ার কাট ও স্টাইলিং</h3><p>আপনার পছন্দমতো আধুনিক হেয়ার কাট ও স্টাইল।</p><small>সার্ভিস ও মূল্য জানতে যোগাযোগ করুন</small></article>
+    <article class="service"><div class="ico">✦</div><h3>হেয়ার কালার</h3><p>নতুন লুকের জন্য হেয়ার কালার ও কালার কেয়ার।</p><small>সার্ভিস ও মূল্য জানতে যোগাযোগ করুন</small></article>
+    <article class="service"><div class="ico">❋</div><h3>হেয়ার স্পা</h3><p>চুলের যত্নে স্পা ও কন্ডিশনিং ট্রিটমেন্ট।</p><small>সার্ভিস ও মূল্য জানতে যোগাযোগ করুন</small></article>
+    <article class="service"><div class="ico">◇</div><h3>হেয়ার স্ট্রেইটেনিং</h3><p>চুলের ধরন বুঝে স্মুথ ও স্ট্রেইট লুকের সেবা।</p><small>সার্ভিস ও মূল্য জানতে যোগাযোগ করুন</small></article>
+    <article class="service"><div class="ico">❦</div><h3>মেনিকিউর ও পেডিকিউর</h3><p>হাত ও পায়ের পরিচ্ছন্নতা এবং সৌন্দর্যচর্চা।</p><small>সার্ভিস ও মূল্য জানতে যোগাযোগ করুন</small></article>
+    <article class="service"><div class="ico">✧</div><h3>থ্রেডিং ও ওয়াক্সিং</h3><p>পরিপাটি লুকের জন্য গ্রুমিং ও পরিচর্যা।</p><small>সার্ভিস ও মূল্য জানতে যোগাযোগ করুন</small></article>
+    <article class="service"><div class="ico">❀</div><h3>মেহেদি ও নেল আর্ট</h3><p>উৎসব ও অনুষ্ঠানের জন্য নান্দনিক ডিজাইন।</p><small>সার্ভিস ও মূল্য জানতে যোগাযোগ করুন</small></article>
+  </div>
+</div></section>
+
+<div class="feature-band"><div class="container feature-row">
+  <div class="feature"><strong>Personal Care</strong><span>আপনার পছন্দকে গুরুত্ব দিয়ে সেবা</span></div>
+  <div class="feature"><strong>Elegant Look</strong><span>আপনার স্টাইলে নান্দনিকতার ছোঁয়া</span></div>
+  <div class="feature"><strong>Special Moments</strong><span>স্মরণীয় দিনের সাজে বিশেষ যত্ন</span></div>
+</div></div>
+
+<section id="gallery" class="gallery"><div class="container">
+  <div class="section-head"><div class="eyebrow">THE BEAUTY GALLERY</div><h2>Elegance in Every Detail</h2><p>রূপ, সাজ ও সৌন্দর্যের অনুপ্রেরণা</p></div>
+  <div class="gallery-grid">
+    <img src="https://images.unsplash.com/photo-1595476108010-b4d1f102b1b1?auto=format&fit=crop&w=1000&q=85" alt="Bridal makeup inspiration">
+    <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?auto=format&fit=crop&w=800&q=85" alt="Makeup portrait">
+    <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?auto=format&fit=crop&w=800&q=85" alt="Salon interior">
+    <img src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=800&q=85" alt="Beauty products">
+    <img src="https://images.unsplash.com/photo-1604654894610-df63bc536371?auto=format&fit=crop&w=800&q=85" alt="Nail art">
+  </div>
+  <p style="text-align:center;color:#bba99b;font-size:12px;margin-top:18px">গ্যালারির ছবিগুলো ডিজাইন প্রদর্শনের জন্য; পার্লারের নিজস্ব কাজের ছবি দিয়ে পরে প্রতিস্থাপন করুন।</p>
+</div></section>
+
+<section><div class="container">
+  <div class="section-head"><div class="eyebrow">THE RUPKOTHA PROMISE</div><h2>Why Choose Us</h2><p>সৌন্দর্যচর্চায় যত্ন, পরিচ্ছন্নতা ও আপনার সন্তুষ্টিকে গুরুত্ব দিই</p></div>
+  <div class="why-grid">
+    <div class="why"><b>01</b><h3>আপনার জন্য ব্যক্তিগত যত্ন</h3><p>আপনার পছন্দ, উপলক্ষ ও প্রয়োজন বুঝে সেবা দেওয়ার চেষ্টা।</p></div>
+    <div class="why"><b>02</b><h3>পরিচ্ছন্ন পরিবেশ</h3><p>সেবার সময় পরিচ্ছন্নতা ও আরামদায়ক পরিবেশকে গুরুত্ব।</p></div>
+    <div class="why"><b>03</b><h3>বিশেষ দিনের প্রস্তুতি</h3><p>বিয়ে, অনুষ্ঠান ও উদযাপনের সাজের জন্য আগাম বুকিং সুবিধা।</p></div>
+  </div>
+</div></section>
+
+<section class="booking" id="booking"><div class="container booking-grid">
+  <div class="booking-copy"><div class="eyebrow">MAKE IT YOUR MOMENT</div><h2>Book Your<br>Beauty Session</h2><p>আপনার পছন্দের সার্ভিস ও সুবিধাজনক তারিখ জানিয়ে বুকিংয়ের অনুরোধ পাঠান। আমরা WhatsApp-এ আপনার সঙ্গে যোগাযোগ করব।</p><p style="color:var(--gold2)">✦ Bridal booking-এর জন্য আগাম যোগাযোগ করুন।</p></div>
+  <form class="booking-form" id="bookingForm">
+    <input id="clientName" placeholder="আপনার নাম" required>
+    <input id="clientPhone" type="tel" placeholder="মোবাইল নম্বর" required>
+    <select id="serviceChoice" required><option value="">সার্ভিস নির্বাচন করুন</option><option>ব্রাইডাল মেকআপ</option><option>পার্টি মেকআপ</option><option>এনগেজমেন্ট মেকআপ</option><option>ফেসিয়াল ও ক্লিনআপ</option><option>স্কিন কেয়ার</option><option>হেয়ার কাট ও স্টাইলিং</option><option>হেয়ার কালার / স্পা</option><option>হেয়ার স্ট্রেইটেনিং</option><option>মেনিকিউর / পেডিকিউর</option><option>থ্রেডিং / ওয়াক্সিং</option><option>মেহেদি / নেল আর্ট</option><option>অন্যান্য</option></select>
+    <input id="bookingDate" type="date" required>
+    <textarea id="bookingNote" placeholder="অতিরিক্ত তথ্য (ঐচ্ছিক)"></textarea>
+    <button class="btn" type="submit">WhatsApp-এ বুকিং পাঠান ↗</button>
+  </form>
+</div></section>
+
+<section id="contact"><div class="container">
+  <div class="section-head"><div class="eyebrow">WE WOULD LOVE TO HEAR FROM YOU</div><h2>Visit Rupkotha</h2><p>সার্ভিস, মূল্য ও অ্যাপয়েন্টমেন্ট সম্পর্কে জানতে যোগাযোগ করুন</p></div>
+  <div class="contact-grid">
+    <div class="contact-card"><div class="ico">⌖</div><h3>ঠিকানা</h3><p>মিজান রোড, ফেনী<br>(সঠিক ঠিকানা নিশ্চিত করে আপডেট করুন)</p></div>
+    <div class="contact-card"><div class="ico">☎</div><h3>ফোন / WhatsApp</h3><p><a href="tel:01638919747">01638-919747</a></p></div>
+    <div class="contact-card"><div class="ico">◷</div><h3>খোলার সময়</h3><p>প্রতিদিন: সকাল ১০টা – রাত ১০টা<br>(ছুটির দিন/সময় পরিবর্তন হতে পারে)</p></div>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="container">
+  <div class="footer-brand">RUPKOTHA</div><p style="letter-spacing:4px;color:var(--gold)">BEAUTY PARLOUR</p>
+  <div class="footer-links"><a href="#home">হোম</a><a href="#services">সার্ভিস</a><a href="#gallery">গ্যালারি</a><a href="#booking">বুকিং</a><a href="#contact">যোগাযোগ</a></div>
+  <p>Beauty • Elegance • Confidence</p><p>© <span id="year"></span> Rupkotha Beauty Parlour. All Rights Reserved.</p>
+</div></footer>
+<a class="whatsapp" href="https://wa.me/8801638919747" target="_blank" rel="noopener">WhatsApp ↗</a>
+
+<script>
+const menuBtn=document.getElementById('menuBtn');
+const nav=document.getElementById('nav');
+menuBtn.addEventListener('click',()=>nav.classList.toggle('open'));
+nav.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+document.getElementById('year').textContent=new Date().getFullYear();
+document.getElementById('bookingDate').min=new Date().toISOString().split('T')[0];
+document.getElementById('bookingForm').addEventListener('submit',function(e){
+  e.preventDefault();
+  const name=document.getElementById('clientName').value.trim();
+  const phone=document.getElementById('clientPhone').value.trim();
+  const service=document.getElementById('serviceChoice').value;
+  const date=document.getElementById('bookingDate').value;
+  const note=document.getElementById('bookingNote').value.trim();
+  const msg=`রূপকথা বিউটি পার্লার - বুকিং অনুরোধ%0Aনাম: ${encodeURIComponent(name)}%0Aফোন: ${encodeURIComponent(phone)}%0Aসার্ভিস: ${encodeURIComponent(service)}%0Aতারিখ: ${encodeURIComponent(date)}%0Aঅতিরিক্ত তথ্য: ${encodeURIComponent(note)}`;
+  window.open('https://wa.me/8801638919747?text='+msg,'_blank');
+});
+</script>
+</body>
+</html>
